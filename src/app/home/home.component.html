@@ -1,0 +1,18 @@
+
+<body>
+  <div class="example-viewport ">
+    <div id="header">
+      <div style="padding-top:50px;">
+        Select an account
+      </div>
+    </div>
+    <div class="scrollbar">
+        <a class="profile" (click)="selectedUser(user)" *ngFor="let user of users">
+          <img [src]="user.profilepicture" class="profile-img">
+          <div class="example-dd">{{user.name}}</div>
+        </a>
+    </div>
+  </div>
+</body>
+
+

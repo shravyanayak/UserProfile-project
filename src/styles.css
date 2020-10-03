@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    min-height: 60vh;
+    max-height: 69vh;
+    margin: 0;
+    font-family: "adobe-clean", sans-serif;
+    /* font-family: 'Ubuntu'; */
+    font-size: 14px;
+  }
+
+
+/* Works on Chrome/Edge/Safari */
+app-profile-page *::-webkit-scrollbar {
+    display: none;
+}
+ /* app-profile-page *::-webkit-scrollbar-track {
+        background: transparent;
+} */
+app-profile-page *::-webkit-scrollbar-thumb {
+    display: none;
+} 
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color:lightgrey transparent;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+*::-webkit-scrollbar-track {
+        background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: lightgrey;
+    border: 5px solid transparent;
+    border-radius: 8px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color:lightgrey transparent;
+}

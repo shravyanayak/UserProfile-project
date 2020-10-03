@@ -1,0 +1,39 @@
+.profile-box {
+    display: flex;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: bold;
+    font-size: larger;
+    padding-top: 40px;
+}
+
+.left-panel {
+     width: 20%;
+    background: rgb(57,90,200);
+    background: linear-gradient(180deg, rgba(57,90,200,1) 0%, rgba(93,60,200,1) 100%);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 160px;
+    min-height: 70vh;
+    border-radius: 20px;
+    color: white;
+}
+
+.right-panel {
+    width: 90%;
+     min-height: 70vh;
+    padding-left: 45px;
+}
+
+.selected-tab {
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.other-tab {
+    color: lightgrey;
+    cursor: pointer;
+    font-weight: bold;
+}

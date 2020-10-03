@@ -1,0 +1,89 @@
+<div class="topnav">
+    <div style="float: left;">Profile</div>
+    <div (click)="dialogOpen = !dialogOpen;" style="float: right; display: flex; cursor: pointer;">
+        <img [src]="currentUser.profilepicture" class="profileimg">
+        <div class="example-dd">{{currentUser.name}}</div>
+    </div>
+    <div class="dialogBox" *ngIf="dialogOpen">
+        <div class="bottomBorder">
+            <div class="topDialogDiv">
+                <img [src]="currentUser.profilepicture" class="profileMed">
+                <div class="text-style">{{currentUser.name}}</div>
+                <div class="text-style light-font" style="float:none !important;">{{currentUser.email}}</div>
+            </div>
+        </div>
+        <div class="bottomBorder">
+            
+        </div>
+        <div>
+            
+        </div>
+        <div class="signoutBtn" (click)="usersService.currentPage = 'home'">
+            Sign Out
+        </div>
+    </div>
+</div>
+<div style="display: flex;padding-top: 35px;">
+    <div style="padding-right: 41px;
+    padding-bottom: 5px;
+    border-right: 1px solid lightgrey;">
+        <div style="width: 350px;text-align: center;">
+            <img [src]="currentUser.profilepicture" class="profileimg-big">
+            <div class="text-style">{{currentUser.name}}</div>
+            <div>
+                <div class="right-panel-style">
+                    <div class="right-panel-right-data-style">
+                        <div class="data-style light-font"> Username: </div>
+                        <div class="data-style light-font"> e-mail: </div>
+                        <div class="data-style light-font"> Website: </div>
+                        <div class="data-style light-font"> Phone: </div>
+                    </div>
+                    <div class="right-panel-left-data-style">
+                        <div class="data-style"> {{currentUser.username}} </div>
+                        <div class="data-style"> {{currentUser.email}} </div>
+                        <div class="data-style"> {{currentUser.website}} </div>
+                        <div class="data-style"> {{currentUser.phone}} </div>
+                    </div>
+                </div>
+                <div class="example-dd" style="color: grey;text-align: center; font-weight: 100;">Company</div>
+                <div style="display: flex;">
+                    <div class="right-panel-right-data-style">
+                        <div class="data-style light-font"> Name: </div>
+                        <div class="data-style light-font"> Catchphrase: </div>
+                        <div class="data-style light-font"> bs: </div>
+                    </div>
+                    <div class="right-panel-left-data-style">
+                        <div class="data-style"> {{currentUser.company.name}} </div>
+                        <div class="data-style"> {{currentUser.company.catchPhrase}} </div>
+                        <div class="data-style"> {{currentUser.company.bs}} </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="padding-left: 20px;">
+        <div style="padding-bottom: 10px;  font-weight: 100;">Address:</div>
+        <div style="padding-left: 40px;display: flex;padding-bottom: 20px;">
+
+            <div class="address-left">
+                <div style="padding: 5px;float:right;" class="light-font"> Street: </div>
+                <div style="padding: 5px;float:right;" class="light-font"> Suite: </div>
+                <div style="padding: 5px;float:right;" class="light-font"> City: </div>
+                <div style="padding: 5px;float:right;" class="light-font">Zipcode: </div>
+            </div>
+            <div class="address-right">
+                <div style="padding: 5px;float:left;"> {{currentUser.address.street}}</div>
+                <div style="padding: 5px;float:left;"> {{currentUser.address.suite}} </div>
+                <div style="padding: 5px;float:left;"> {{currentUser.address.city}} </div>
+                <div style="padding: 5px;float:left;"> {{currentUser.address.zipcode}} </div>
+            </div>
+
+        </div>
+        <div style="padding-left: 40px;">
+
+            <img [src]="'../../assets/map.jpg'" style="border-radius: 5px;;margin-left: 13px;">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="profile-box">
+    <div class="left-panel">
+        <div role="presentation" style="border-bottom: 1px solid lightgrey;padding: 10px;"
+            [ngClass]="{'selected-tab': currentTab=='profile', 'other-tab': currentTab!='profile'}">
+            <a (click)="currentTab='profile'">Profile</a>
+        </div>
+        <div role="presentation" style="border-bottom: 1px solid lightgrey;padding: 10px;"
+        [ngClass]="{'selected-tab': currentTab=='posts', 'other-tab': currentTab!='posts'}">
+            <a (click)="currentTab='posts'">Posts</a>
+        </div>
+        <div role="presentation" style="border-bottom: 1px solid lightgrey;padding: 10px;"
+        [ngClass]="{'selected-tab': currentTab=='gallery', 'other-tab': currentTab!='gallery'}">
+            <a (click)="currentTab='gallery'">Gallery</a>
+        </div>
+        <div role="presentation" style="padding: 10px;" 
+        [ngClass]="{'selected-tab': currentTab=='todo', 'other-tab': currentTab!='todo'}">
+            <a (click)="currentTab='todo'" >Todo</a>
+        </div>
+    </div >
+    <div class="right-panel">
+        <div *ngIf="currentTab=='profile'">
+            <app-profile [currentUser]="currentUser"></app-profile>
+        </div>
+        <div *ngIf="currentTab=='posts'">
+            <app-posts></app-posts>
+        </div>
+        <div *ngIf="currentTab=='gallery'">
+            <app-gallery></app-gallery>
+        </div>
+        <div *ngIf="currentTab=='todo'">
+            <app-todo></app-todo>
+        </div>
+    </div>
+</div>
