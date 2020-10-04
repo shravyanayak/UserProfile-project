@@ -1,0 +1,96 @@
+.topnav {
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 22px;
+  padding-top: 31px;
+}
+
+.profile {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  text-decoration: none !important;
+}
+
+.profileimg {
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+
+.dialogBox {
+  border: 2px;
+  z-index: auto;
+  position: fixed;
+  background: white;
+  width: 250px;
+  height: 300px;
+  display: block;
+  right: 40px;
+  float: right;
+  top: 110px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 25px -10px;
+}
+
+.bottomBorder {
+  padding: 15px;
+}
+
+.topDialogDiv {
+  text-align: center;
+  margin: auto;
+  border-bottom: 1px lightgrey solid;
+  padding-top: 15px;
+}
+
+.profileMed {
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+}
+
+.text-style {
+  color: gray;
+  padding: 5px;
+  font-size: medium;
+}
+
+.light-font {
+  font-weight: 100;
+  float: right !important;
+}
+
+.signoutBtn {
+  background: red;
+  border-radius: 15px;
+  height: 30px;
+  margin: auto;
+  width: 100px;
+  color: white;
+  font-size: smaller;
+  text-align: center;
+  cursor: pointer;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 600px;
+}
+
+#username {
+  font-weight: 100;
+  color: grey;
+}
+.coming-soon {
+  font-weight: 500;
+  font-size: 4.875em;
+  color: grey;
+  opacity: 0.2;
+}

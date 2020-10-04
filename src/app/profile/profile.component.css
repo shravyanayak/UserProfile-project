@@ -1,118 +1,128 @@
-.topnav{
-    overflow: hidden;
-position: relative;
-border-bottom: 1px solid lightgrey;
-padding-bottom: 22px;
-padding-top: 31px;
+.topnav {
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 22px;
+  padding-top: 31px;
 }
 
 .profile {
-    padding: 10px;
-    border-bottom: 1px solid lightgrey;
-    display: flex;
-    text-decoration: none !important;
-  }
-  
-  .profileimg {
-    height: 30px;
-    width: 30px;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  text-decoration: none !important;
+}
+
+.profileimg {
+  height: 30px;
+  width: 30px;
   border-radius: 25px;
-  margin-right: 20px;}
+  margin-right: 20px;
+  object-fit: cover;
+}
 
-  .profileimg-big {
-    height: 105px;
-    width: 106px;
-    border-radius: 51px;
-  margin-right: 20px;}
+.profileimg-big {
+  height: 105px;
+  width: 106px;
+  border-radius: 51px;
+  margin-right: 20px;
+  object-fit: cover;
+}
 
-  .text-style {
-    color:gray;
-    padding: 5px;
-    font-size: medium;
-  }
-  .right-panel-style{
-    display: flex;
-    border-bottom: 
-    1px solid lightgrey;
-  }
+.text-style {
+  color: gray;
+  padding: 5px;
+  font-size: medium;
+}
+.right-panel-style {
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+}
+#username {
+  font-weight: 100;
+  color: grey;
+}
 
-  .right-panel-right-data-style{
-    color: grey; 
-     margin-right: 13px;
-     display: grid;
-  }
+.right-panel-right-data-style {
+  color: grey;
+  margin-right: 13px;
+  display: grid;
+  min-width: 95px;
+}
 
-  .right-panel-left-data-style{
-    margin-left: 5px;
-    color: gray;
-    display: grid;
-  }
+.right-panel-left-data-style {
+  margin-left: 5px;
+  color: gray;
+  display: grid;
+}
 
-  .data-style{
-    padding: 5px;
-    float:left;
-    text-align: left;
-  }
+.data-style {
+  padding: 5px;
+  float: left;
+  text-align: left;
+}
 
-  .address-left{
-    color: grey; 
-    margin-right: 13px;
-    width: 45px;
+.address-left {
+  color: grey;
+  margin-right: 13px;
+  width: 45px;
+}
 
-  }
+.address-right {
+  margin-left: 5px;
+  width: 200px;
+  color: gray;
+  display: grid;
+}
 
-  .address-right{
-    margin-left: 5px;
-    width: 200px;
-    color: gray;
-    display: grid;
-  }
+.light-font {
+  font-weight: 100;
+  float: right !important;
+  text-align: right;
+}
 
-  .light-font {
-    font-weight: 100;
-    float: right !important;
-  }
+.dialogBox {
+  border: 2px;
+  z-index: auto;
+  position: fixed;
+  background: white;
+  width: 250px;
+  height: 300px;
+  display: block;
+  right: 40px;
+  float: right;
+  top: 110px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 25px -10px;
+}
 
-  .dialogBox{
-    border: 2px;
-    z-index: auto;
-    position: fixed;
-    background: white;
-    width: 250px;
-    height: 300px;
-    display: block;
-    right: 40px;
-    float: right;
-    top: 110px;
-    border-radius: 20px;
-    box-shadow: 1px 1px 25px -10px;
-  }
+.bottomBorder {
+  padding: 15px;
+}
 
-  .bottomBorder {
-    padding: 15px;
-  }
+.topDialogDiv {
+  text-align: center;
+  margin: auto;
+  border-bottom: 1px lightgrey solid;
+  padding-top: 15px;
+}
 
-  .topDialogDiv {
-    text-align: center;
-    margin: auto;
-    border-bottom: 1px lightgrey solid;
-    padding-top: 15px;
-  }
+.profileMed {
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  object-fit: cover;
+}
 
-  .profileMed {
-    height: 80px;
-    width: 80px;
-    border-radius: 50px;
-  }
-
-  .signoutBtn {
-    background: red;
-    border-radius: 15px;
-    height: 30px;
-    margin: auto;
-    width: 100px;
-    color: white;
-    font-size: smaller;
-    text-align: center;
-    cursor: pointer;
-  }
+.signoutBtn {
+  background: red;
+  border-radius: 15px;
+  height: 30px;
+  margin: auto;
+  width: 100px;
+  color: white;
+  font-size: smaller;
+  text-align: center;
+  cursor: pointer;
+}

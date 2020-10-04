@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="scrollbar">
-        <a class="profile" (click)="selectedUser(user)" *ngFor="let user of users">
+        <a class="profile" [routerLink]="['/profile-page']"  (click)="selectedUser(user)" *ngFor="let user of users">
           <img [src]="user.profilepicture" class="profile-img">
           <div class="example-dd">{{user.name}}</div>
         </a>

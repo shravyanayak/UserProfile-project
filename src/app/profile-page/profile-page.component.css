@@ -6,6 +6,7 @@
     font-weight: bold;
     font-size: larger;
     padding-top: 40px;
+    min-height: 100vh;
 }
 
 .left-panel {
@@ -36,4 +37,20 @@
     color: lightgrey;
     cursor: pointer;
     font-weight: bold;
+}
+
+.selected {
+    height: 25px;
+    display: block;
+    position: relative;
+    top: -30px;
+    color: red;
+    z-index: 100;
+    background: white;
+    float: right;
+    width: 30px;
+    right: -37px;
+    border-radius: 10px;
+    color: grey;
+    padding-left: 7px;
 }

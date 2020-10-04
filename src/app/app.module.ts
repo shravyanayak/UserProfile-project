@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import {CdkStepperModule} from '@angular/cdk/stepper';
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CdkStepperModule } from '@angular/cdk/stepper';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -13,13 +13,12 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { TodoComponent } from './todo/todo.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UsersService } from './services/users.service';
 
-// const appRoutes: Routes=[
-//   { path: '', component: HomeComponent}, 
-//   { path: 'profile-page', component: ProfilePageComponent},
-//   { path: '*', component: HomeComponent},  
-// ];
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'profile-page', component: ProfilePageComponent },
+  { path: '*', component: HomeComponent },
+];
 
 @NgModule({
   declarations: [
@@ -29,23 +28,16 @@ import { UsersService } from './services/users.service';
     PostsComponent,
     GalleryComponent,
     TodoComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,
-    CdkStepperModule,
-    CdkTableModule,
-    CdkTreeModule,
+    RouterModule.forRoot(appRoutes),
     HttpClientModule,
     ScrollingModule,
   ],
-  exports:[
-    
-  ],
+  exports: [],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { 
-
-  
-}
+export class AppModule {}

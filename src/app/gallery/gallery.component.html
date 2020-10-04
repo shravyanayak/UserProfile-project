@@ -1,1 +1,33 @@
-<p>gallery works!</p>
+<div class="topnav">
+    <div style="float: left;">Profile</div>
+    <div (click)="dialogOpen = !dialogOpen;" style="float: right; display: flex; cursor: pointer;">
+        <img [src]="currentUser.profilepicture" class="profileimg">
+        <div id="username">{{currentUser.name}}</div>
+    </div>
+    <div class="dialogBox" *ngIf="dialogOpen">
+        <div class="bottomBorder">
+            <div class="topDialogDiv">
+                <img [src]="currentUser.profilepicture" class="profileMed">
+                <div class="text-style">{{currentUser.name}}</div>
+                <div class="text-style light-font" style="float:none !important;">{{currentUser.email}}</div>
+            </div>
+        </div>
+        <div class="bottomBorder">
+            
+        </div>
+        <div>
+            
+        </div>
+        <div class="signoutBtn" [routerLink]="['/']" (click)="usersService.currentPage = 'home'">
+            Sign Out
+        </div>
+    </div>
+</div>
+
+<div class="middle">
+    <div class="coming-soon">Coming Soon</div>
+
+  </div>
+
+
+    

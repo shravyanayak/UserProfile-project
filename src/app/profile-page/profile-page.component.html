@@ -4,17 +4,29 @@
             [ngClass]="{'selected-tab': currentTab=='profile', 'other-tab': currentTab!='profile'}">
             <a (click)="currentTab='profile'">Profile</a>
         </div>
+        <div class="selected" *ngIf="currentTab=='profile'">
+            <mat-icon>></mat-icon>
+        </div>
         <div role="presentation" style="border-bottom: 1px solid lightgrey;padding: 10px;"
         [ngClass]="{'selected-tab': currentTab=='posts', 'other-tab': currentTab!='posts'}">
             <a (click)="currentTab='posts'">Posts</a>
+        </div>
+        <div class="selected" *ngIf="currentTab=='posts'">
+            <mat-icon>></mat-icon>
         </div>
         <div role="presentation" style="border-bottom: 1px solid lightgrey;padding: 10px;"
         [ngClass]="{'selected-tab': currentTab=='gallery', 'other-tab': currentTab!='gallery'}">
             <a (click)="currentTab='gallery'">Gallery</a>
         </div>
+        <div class="selected" *ngIf="currentTab=='gallery'">
+            <mat-icon>></mat-icon>
+        </div>
         <div role="presentation" style="padding: 10px;" 
         [ngClass]="{'selected-tab': currentTab=='todo', 'other-tab': currentTab!='todo'}">
             <a (click)="currentTab='todo'" >Todo</a>
+        </div>
+        <div class="selected" *ngIf="currentTab=='todo'">
+            <mat-icon>></mat-icon>
         </div>
     </div >
     <div class="right-panel">
@@ -22,13 +34,13 @@
             <app-profile [currentUser]="currentUser"></app-profile>
         </div>
         <div *ngIf="currentTab=='posts'">
-            <app-posts></app-posts>
+            <app-posts [currentUser]="currentUser"></app-posts>
         </div>
         <div *ngIf="currentTab=='gallery'">
-            <app-gallery></app-gallery>
+            <app-gallery [currentUser]="currentUser"></app-gallery>
         </div>
         <div *ngIf="currentTab=='todo'">
-            <app-todo></app-todo>
+            <app-todo [currentUser]="currentUser"></app-todo>
         </div>
     </div>
 </div>

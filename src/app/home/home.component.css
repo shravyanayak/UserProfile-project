@@ -62,5 +62,6 @@ body {
   height: 30px;
   width: 30px;
   border-radius: 20px;
+  object-fit: cover;
   margin-right: 10px;
 }
