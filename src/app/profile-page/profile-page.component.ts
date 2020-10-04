@@ -9,12 +9,23 @@ import { UsersService } from '../services/users.service';
 })
 export class ProfilePageComponent implements OnInit {
   currentTab = 'profile';
+  expanded: boolean = false;
   currentUser: UserDetail;
+  otherUsers: UserDetail[];
+  openChats: any[];
+
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
     this.currentUser = this.usersService.selectedUser;
-    console.log("CUrrent user:" + this.currentUser);
+    this.otherUsers = this.usersService.allUsers;
+    this.otherUsers.filter((user) => {
+      return (user.name === this.currentUser.name) ? null : user;
+    });
   }
 
+  openChat(user: UserDetail) {
+     
+    this.openChats.push(user);
+  }
 }

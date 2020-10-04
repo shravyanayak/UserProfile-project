@@ -8,6 +8,8 @@ import { UserDetail } from '../models/user-detail.model';
 export class UsersService {
   selectedUser: UserDetail;
   currentPage: string = 'home';
+  allUsers: UserDetail[];
+  
   constructor(private http: HttpClient) {}
 
   getData() {

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
       (userData['users'] as UserDetail[]).forEach((user) => {
         this.users.push(user as UserDetail);
       });
-      console.log(this.users);
+      this.userService.allUsers = this.users;
     });
   }
 

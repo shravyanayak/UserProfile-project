@@ -22,9 +22,9 @@
 }
 
 .profileimg-big {
-  height: 105px;
-  width: 106px;
-  border-radius: 51px;
+  height: 130px;
+  width: 130px;
+  border-radius: 100px;
   margin-right: 20px;
   object-fit: cover;
 }

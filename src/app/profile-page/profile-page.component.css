@@ -1,56 +1,109 @@
 .profile-box {
-    display: flex;
-    padding: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    font-weight: bold;
-    font-size: larger;
-    padding-top: 40px;
-    min-height: 100vh;
+  display: flex;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-weight: bold;
+  font-size: larger;
+  padding-top: 40px;
+  min-height: 100vh;
 }
 
 .left-panel {
-     width: 20%;
-    background: rgb(57,90,200);
-    background: linear-gradient(180deg, rgba(57,90,200,1) 0%, rgba(93,60,200,1) 100%);
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 160px;
-    min-height: 70vh;
-    border-radius: 20px;
-    color: white;
+  width: 20%;
+  background: rgb(57, 90, 200);
+  background: linear-gradient(
+    180deg,
+    rgba(57, 90, 200, 1) 0%,
+    rgba(93, 60, 200, 1) 100%
+  );
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 160px;
+  min-height: 70vh;
+  border-radius: 20px;
+  color: white;
 }
 
 .right-panel {
-    width: 90%;
-     min-height: 70vh;
-    padding-left: 45px;
+  width: 90%;
+  min-height: 70vh;
+  padding-left: 45px;
 }
 
 .selected-tab {
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .other-tab {
-    color: lightgrey;
-    cursor: pointer;
-    font-weight: bold;
+  color: lightgrey;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .selected {
-    height: 25px;
-    display: block;
-    position: relative;
-    top: -30px;
-    color: red;
-    z-index: 100;
-    background: white;
-    float: right;
-    width: 30px;
-    right: -37px;
-    border-radius: 10px;
-    color: grey;
-    padding-left: 7px;
+  height: 25px;
+  display: block;
+  position: relative;
+  top: -30px;
+  color: red;
+  z-index: 100;
+  background: white;
+  float: right;
+  width: 30px;
+  right: -37px;
+  border-radius: 10px;
+  color: grey;
+  padding-left: 7px;
 }
+
+.chatbox {
+    height: 40px;
+    background: royalblue;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+.chatwrapper {
+    position: fixed;
+    right: 40px;
+    float: right;
+    bottom: 0px;
+    width: 240px;
+    border: royalblue 1px solid;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.chatcontents {
+    height: 250px;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.example-dd {
+    color: black;
+    padding: 3px;
+    font-size: inherit;
+    cursor: pointer;
+  }
+  
+  .profile-img {
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .chatUser {
+    display: flex;
+    padding: 8px;
+  }

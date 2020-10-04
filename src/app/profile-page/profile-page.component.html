@@ -44,3 +44,27 @@
         </div>
     </div>
 </div>
+
+<div class="chatwrapper">
+    <div class="chatbox" (click)="expanded = !expanded">
+        Chat
+    </div>
+    <div class="chatcontents" *ngIf="expanded">
+        <div class="chatUser" *ngFor="let user of otherUsers" (click)="openChat(user)">
+            <img [src]="user.profilepicture" class="profile-img">
+            <div class="example-dd">{{user.name}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="user-chat-box" *ngFor="let userChat of openChats">
+    <div class="chatbox" (click)="userChat.expanded = !userChat.expanded">
+        {{userChat.name}}
+    </div>
+    <div class="chatcontents" style="height: 100px" *ngIf="expanded">
+        <div class="chatUser" *ngFor="let user of otherUsers" (click)="openChat(user)">
+            <img [src]="user.profilepicture" class="profile-img">
+            <div class="example-dd">{{user.name}}</div>
+        </div>
+    </div>
+</div>
