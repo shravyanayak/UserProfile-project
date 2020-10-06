@@ -45,26 +45,37 @@
     </div>
 </div>
 
-<div class="chatwrapper">
-    <div class="chatbox" (click)="expanded = !expanded">
-        Chat
+<div class="chatwrapper" >
+    
+    <div class="chatbox " (click)="expanded = !expanded">
+        Chats
+        <p class="arrow-p-style"><i class="arrow up"></i></p>
     </div>
-    <div class="chatcontents" *ngIf="expanded">
+    <div class="chatcontents scrollbar " *ngIf="expanded"  >
+        <p class="arrow-p-style"><i class="arrow down"></i></p>
         <div class="chatUser" *ngFor="let user of otherUsers" (click)="openChat(user)">
             <img [src]="user.profilepicture" class="profile-img">
             <div class="example-dd">{{user.name}}</div>
+            <div class="online-indicator"> </div>
         </div>
     </div>
 </div>
 
-<div class="user-chat-box" *ngFor="let userChat of openChats">
+<div class="user-chat-box" [ngStyle]="{'right': getRightMargin(index)}" *ngFor="let userChat of openChats; let index = index;">
     <div class="chatbox" (click)="userChat.expanded = !userChat.expanded">
+        <img [src]="userChat.profilepicture" class="profile-img">
         {{userChat.name}}
     </div>
-    <div class="chatcontents" style="height: 100px" *ngIf="expanded">
-        <div class="chatUser" *ngFor="let user of otherUsers" (click)="openChat(user)">
-            <img [src]="user.profilepicture" class="profile-img">
-            <div class="example-dd">{{user.name}}</div>
+    <div class="chatcontents" style="height: 100px;" *ngIf="userChat.expanded">
+        <div>
+            <div class="message-background"> 
+                Lorem ipsum dolor sit amet, consectetur
+            </div>
+        </div>
+        <div>
+            <div class="message-background"> 
+                Lorem ipsum dolor sit.
+            </div>
         </div>
     </div>
 </div>

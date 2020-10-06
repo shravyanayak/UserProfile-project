@@ -60,17 +60,91 @@
 }
 
 .chatbox {
-    height: 40px;
-    background: royalblue;
-    border-top-right-radius: 10px;
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    text-align: center;
-    color: white;
-    margin: auto;
+  height: 40px;
+  background: royalblue;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  text-align: center;
+  color: white;
+  margin: auto;
+  padding: 8px;
+  display: flex;
+  padding-right: 21px;
 }
 
 .chatwrapper {
+  position: fixed;
+  right: 40px;
+  float: right;
+  bottom: 0px;
+  width: 240px;
+  border: royalblue 1px solid;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.chatcontents {
+  height: 250px;
+  background-color: white;
+  overflow-y: scroll;
+  
+}
+
+.example-dd {
+  color: black;
+  padding: 3px;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.online-indicator{
+  background-color: rgb(50, 218, 140);
+    float: right;
+    border-radius: 50%;
+    width: 8px;
+    height: 9px;
+    right: 25px;
+    float: right;
+    margin-top: 10px;
+    position: absolute;
+}
+
+
+/* .scrollbar {
+  
+  height: 75%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+.scrollbar-primary::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+} */
+
+.profile-img {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.chatUser {
+  display: flex;
+  padding: 8px;
+}
+
+
+
+.user-chat-box {
     position: fixed;
     right: 40px;
     float: right;
@@ -81,29 +155,35 @@
     border-top-left-radius: 10px;
 }
 
-.chatcontents {
-    height: 250px;
-    background-color: white;
-    overflow-y: scroll;
+
+.arrow-p-style{
+  float: right;
+  right: -166px;
+  position: relative;
+}
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+ 
 }
 
-.example-dd {
-    color: black;
-    padding: 3px;
-    font-size: inherit;
-    cursor: pointer;
-  }
-  
-  .profile-img {
-    height: 30px;
-    width: 30px;
-    border-radius: 20px;
-    object-fit: cover;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .chatUser {
-    display: flex;
-    padding: 8px;
-  }
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.message-background{
+  background-color: rgb(231, 238, 243);
+  padding: 10px;
+  margin: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}

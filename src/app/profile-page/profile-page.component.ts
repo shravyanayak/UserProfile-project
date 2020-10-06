@@ -12,20 +12,30 @@ export class ProfilePageComponent implements OnInit {
   expanded: boolean = false;
   currentUser: UserDetail;
   otherUsers: UserDetail[];
-  openChats: any[];
-
+  openChats: any[]=[];
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
     this.currentUser = this.usersService.selectedUser;
     this.otherUsers = this.usersService.allUsers;
-    this.otherUsers.filter((user) => {
-      return (user.name === this.currentUser.name) ? null : user;
+    this.otherUsers   =this.otherUsers.filter((user) => {
+      return !(user.name === this.currentUser.name);
     });
   }
 
   openChat(user: UserDetail) {
-     
-    this.openChats.push(user);
+    if (this.openChats.find((openUser)=>{
+      return user.name == openUser.name;
+    })) {
+      return;
+    }
+    let userModified = user;
+    userModified['expanded'] = true;
+    this.openChats.unshift(userModified);
+    this.openChats = this.openChats.slice(0, 3);
+  }
+
+  getRightMargin(index) {
+    return (290 + 250 * (index)).toString() + 'px';
   }
 }
