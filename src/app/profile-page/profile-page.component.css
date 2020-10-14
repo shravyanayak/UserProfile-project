@@ -88,28 +88,27 @@
   height: 250px;
   background-color: white;
   overflow-y: scroll;
-  
 }
 
-.example-dd {
+.chatbox-username {
   color: black;
   padding: 3px;
   font-size: inherit;
   cursor: pointer;
+  padding-right: 4px;
+  min-width: 158px;
 }
 
-.online-indicator{
+.online-indicator {
   background-color: rgb(50, 218, 140);
-    float: right;
-    border-radius: 50%;
-    width: 8px;
-    height: 9px;
-    right: 25px;
-    float: right;
-    margin-top: 10px;
-    position: absolute;
+  float: right;
+  border-radius: 50%;
+  width: 8px;
+  height: 9px;
+  right: 25px;
+  float: right;
+  margin-top: 10px;
 }
-
 
 /* .scrollbar {
   
@@ -142,23 +141,20 @@
   padding: 8px;
 }
 
-
-
 .user-chat-box {
-    position: fixed;
-    right: 40px;
-    float: right;
-    bottom: 0px;
-    width: 240px;
-    border: royalblue 1px solid;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+  position: fixed;
+  right: 40px;
+  float: right;
+  bottom: 0px;
+  width: 240px;
+  border: royalblue 1px solid;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
-
-.arrow-p-style{
+.arrow-p-style {
   float: right;
-  right: -166px;
+  right: -118px;
   position: relative;
 }
 .arrow {
@@ -166,7 +162,12 @@
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
- 
+}
+
+.arrow-p-style-chats {
+  float: right;
+  right: 10px;
+  position: absolute;
 }
 
 .up {
@@ -179,11 +180,37 @@
   -webkit-transform: rotate(45deg);
 }
 
-.message-background{
+.contacts_message-background {
   background-color: rgb(231, 238, 243);
   padding: 10px;
   margin: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  margin-right: 43px;
+  font-size: 11px;
+}
+.user_message-background {
+  background-color: rgb(231, 238, 243);
+  padding: 10px;
+  margin: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: 43px;
+  font-size: 11px;
+}
+
+.chat-icon {
+  color: white;
+  min-width: 25px;
+  margin-right: 18px;
+}
+
+.chat-input {
+  background-color: white;
+  width: 238px;
+  border: 0ch;
+  border: grey 0.1px solid;
+  outline-width: 0px;
 }

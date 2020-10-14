@@ -48,14 +48,15 @@
 <div class="chatwrapper" >
     
     <div class="chatbox " (click)="expanded = !expanded">
+        <img src="../../assets/chat.svg" class="chat-icon">
         Chats
-        <p class="arrow-p-style"><i class="arrow up"></i></p>
+        <p class="arrow-p-style"><i class="arrow" [ngClass]="{'down': expanded, 'up': !expanded}"></i></p>
     </div>
-    <div class="chatcontents scrollbar " *ngIf="expanded"  >
+    <div class="chatcontents cd..cd cdscrollbar " *ngIf="expanded"  >
         <p class="arrow-p-style"><i class="arrow down"></i></p>
         <div class="chatUser" *ngFor="let user of otherUsers" (click)="openChat(user)">
             <img [src]="user.profilepicture" class="profile-img">
-            <div class="example-dd">{{user.name}}</div>
+            <div class="chatbox-username">{{user.name}}</div>
             <div class="online-indicator"> </div>
         </div>
     </div>
@@ -63,19 +64,29 @@
 
 <div class="user-chat-box" [ngStyle]="{'right': getRightMargin(index)}" *ngFor="let userChat of openChats; let index = index;">
     <div class="chatbox" (click)="userChat.expanded = !userChat.expanded">
+           
         <img [src]="userChat.profilepicture" class="profile-img">
         {{userChat.name}}
+        <p class="arrow-p-style-chats"><i class="arrow" [ngClass]="{'down': userChat.expanded, 'up': !userChat.expanded}"></i></p>
     </div>
-    <div class="chatcontents" style="height: 100px;" *ngIf="userChat.expanded">
+    <div class="chatcontents" style="height: 150px;" *ngIf="userChat.expanded">
         <div>
-            <div class="message-background"> 
+            <div class="contacts_message-background"> 
                 Lorem ipsum dolor sit amet, consectetur
             </div>
         </div>
         <div>
-            <div class="message-background"> 
+            <div class="contacts_message-background"> 
                 Lorem ipsum dolor sit.
             </div>
         </div>
+        <div>
+            <div class="user_message-background"> 
+                sorem ipsum dolor sit amet.
+            </div>
+        </div>
+        
+        <input  class="chat-input" type="text">
     </div>
+    
 </div>
